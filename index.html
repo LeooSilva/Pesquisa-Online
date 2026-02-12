@@ -6,111 +6,155 @@
     <title>Pesquisa Culturama</title>
 </head>
 <body>
-    ```html
+
 <header>
-        <h1>Pesquisa Online</h1>
-        <section>
-            <form action="" method="get">
-                <fieldset>
-                    <legend>Dados Pessoais</legend>
+    <h1>Pesquisa Online</h1>
+</header>
 
-               <!-- DADOS PESSOAIS -->
-                <label for="username">Nome</label>
-                <input type="text" name="username" required>
-                
+<section>
+    <form action="" method="get">
 
-                
-                <label for="years">Idade</label>
-                <input type="number" name="age"min="12" max="100" required>
+        <!-- ================= DADOS PESSOAIS ================= -->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
 
-                <br>
+            <label for="username">Nome</label>
+            <input type="text" id="username" name="username" required>
 
-                <label for="birthDate">Data de nascimento</label>]
-                <input type="date" name="birthDate">
+            <br><br>
 
-                <br>
+            <label for="age">Idade</label>
+            <input type="number" id="age" name="age" min="12" max="100" required>
 
-                <label for="Useremail">Email</label>
-                <input type="email" name="Useremail" required>
+            <br><br>
 
-                <br>
+            <label for="birthDate">Data de nascimento</label>
+            <input type="date" id="birthDate" name="birthDate">
 
-                <label for="UserNumberPhone">Telefone</label>
-                <input type="tel" name="UserNumberPhone" pattern="{0-9}"{11} placeholder="(DDD + numero)">
+            <br><br>
 
-                <br>
+            <label for="userEmail">Email</label>
+            <input type="email" id="userEmail" name="userEmail" required>
 
-                <label for="UserImage">Upload de Fotos</label>
-                <input type="file" accept="image/*" name="UserImage">
+            <br><br>
 
-                <br>
-                </fieldset>
+            <label for="userPhone">Telefone</label>
+            <input type="tel" id="userPhone" name="userPhone"
+                   pattern="[0-9]{11}"
+                   placeholder="Somente números (DDD + número)">
 
-                <fieldset>
-                <legend>Perfil</legend>
+            <br><br>
 
-                <p>Gênero</p>
-                <input type="radio" name="userGender" value="Feminino">
-                <label for="userGender">Feminino</label>
+            <label for="userImage">Upload de Foto</label>
+            <input type="file" id="userImage" name="userImage" accept="image/*">
 
-                <input type="radio" name="userGender" value="Masculino">
-                <label for="userGender">Masculino</label>
+        </fieldset>
 
-                <input type="radio" name="userGender" value="notinfomed">
-                <label for="userGender">Prefiro não informar</label>
-                    <br>
-                    <label for="maritalStatus">Estado Civil</label>
-                <select name="maritalStatus">
-                    <option value="notinfomed">Selecione...</option>
-                    <option value="single">Solteiro(a)</option>
-                    <option value="married">Casado(a)</option>
-                    <option value="divorced">Divorciado(a)</option>
-                </select>
-            
+        <br>
 
-          <label for="userState>Estado</label>
-            <select name="userStateid">
-<option value="AC">Acre</option>
-<option value="AL">Alagoas</option>
-<option value="AP">Amapá</option>
-<option value="AM">Amazonas</option>
-<option value="BA">Bahia</option>
-<option value="CE">Ceará</option>
-<option value="DF">Distrito Federal</option>
-<option value="ES">Espírito Santo</option>
-<option value="GO">Goiás</option>
-<option value="MA">Maranhão</option>
-<option value="MS">Mato Grosso do Sul</option>
-<option value="MT">Mato Grosso</option>
-<option value="MG">Minas Gerais</option>
-<option value="PA">Pará</option>
-<option value="PB">Paraíba</option>
-<option value="PR">Paraná</option>
-<option value="PE">Pernambuco</option>
-<option value="PI">Piauí</option>
-<option value="RJ">Rio de Janeiro</option>
-<option value="RN">Rio Grande do Norte</option>
-<option value="RS">Rio Grande do Sul</option>
-<option value="RO">Rondônia</option>
-<option value="RR">Roraima</option>
-<option value="SC">Santa Catarina</option>
-<option value="SP">São Paulo</option>
-<option value="SE">Sergipe</option>
-<option value="TO">Tocantins</option>
+        <!-- ================= PERFIL ================= -->
+        <fieldset>
+            <legend>Perfil</legend>
 
-<label for="userCidade">Cidade</label>
-<input type="text"name="userCidade" required>
-</select>
+            <p>Gênero</p>
+
+            <input type="radio" id="fem" name="userGender" value="Feminino">
+            <label for="fem">Feminino</label>
+
+            <input type="radio" id="masc" name="userGender" value="Masculino">
+            <label for="masc">Masculino</label>
+
+            <input type="radio" id="naoInf" name="userGender" value="NaoInformado">
+            <label for="naoInf">Prefiro não informar</label>
+
+            <br><br>
+
+            <label for="maritalStatus">Estado Civil</label>
+            <select id="maritalStatus" name="maritalStatus">
+                <option value="">Selecione...</option>
+                <option value="single">Solteiro(a)</option>
+                <option value="married">Casado(a)</option>
+                <option value="divorced">Divorciado(a)</option>
+            </select>
+
+            <br><br>
+
+            <label for="userState">Estado</label>
+            <select id="userState" name="userState">
+                <option value="">Selecione...</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+
+            <br><br>
+
+            <label for="userCidade">Cidade</label>
+            <input type="text" id="userCidade" name="userCidade" required>
+
+            <br><br>
+
+        </fieldset>
 
 
-            <button type="submit">Enviar</button>
-            </fieldset>
-            </form>
-        </section>
 
-            
 
-    </header>
-```
+        <fieldset>
+            <legend>Habitos</legend>
+            <p>Redes Sociais</p>
+            <input type="checkbox" name="social" value="instragam">
+            <label for="social">Instragam</label>
+            <br>
+            <input type="checkbox" name="social" value="Facebook">
+            <label for="social">Facebook</label>
+            <br>
+            <input type="checkbox" name="social" value="Linkedin">
+            <label for="social">Linkedin</label>
+            <br>
+            <label for="musicstyle"></label>
+            <input type="text" id="musicstyle" name="userMusicStyle" list="styleTypes">git
+            <datalist id="styleTypes">
+                <option value="Rock">
+                <option value="Pop">
+                <option value="Funk">
+                <option value="Sertanejo">
+                <option value="Clássica">
+                <option value="Jazz">
+                <option value="Eletrônica">
+
+            </datalist>
+        </fieldset>
+
+
+
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
 </body>
 </html>
